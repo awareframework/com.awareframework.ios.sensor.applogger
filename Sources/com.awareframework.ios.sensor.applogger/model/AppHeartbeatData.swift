@@ -3,7 +3,7 @@ import GRDB
 import com_awareframework_ios_core
 
 public struct AppHeartbeatData: BaseDbModelSQLite {
-    public static let databaseTableName = "appHeartbeatData"
+    public static let databaseTableName = "ios_app_heartbeat"
 
     public var id: Int64?
     public var timestamp: Int64

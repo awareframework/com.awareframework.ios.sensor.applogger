@@ -3,7 +3,7 @@ import GRDB
 import com_awareframework_ios_core
 
 public struct AppEventsData: BaseDbModelSQLite {
-    public static let databaseTableName = "appEventsData"
+    public static let databaseTableName = "ios_app_events"
 
     public var id: Int64?
     public var timestamp: Int64
