@@ -28,6 +28,13 @@ let package = Package(
             ],
             path: "Sources/com.awareframework.ios.sensor.applogger"
         ),
+        .testTarget(
+            name: "com.awareframework.ios.sensor.apploggerTests",
+            dependencies: [
+                "com.awareframework.ios.core",
+                "com.awareframework.ios.sensor.applogger",
+            ]
+        ),
     ],
     swiftLanguageModes: [.v5]
 )
