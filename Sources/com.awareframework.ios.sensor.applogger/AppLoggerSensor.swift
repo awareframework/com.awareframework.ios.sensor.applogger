@@ -218,21 +218,7 @@ public class AppLoggerSensor: AwareSensor {
     }
 
     private func makeSyncConfig(from base: DbSyncConfig, completionHandler: DbSyncCompletionHandler?) -> DbSyncConfig {
-        let c = DbSyncConfig()
-        c.removeAfterSync = base.removeAfterSync
-        c.batchSize = base.batchSize
-        c.markAsSynced = base.markAsSynced
-        c.skipSyncedData = base.skipSyncedData
-        c.keepLastData = base.keepLastData
-        c.deviceId = base.deviceId
-        c.debug = base.debug
-        c.debugLevel = base.debugLevel
-        c.progressHandler = base.progressHandler
-        c.dispatchQueue = base.dispatchQueue
-        c.backgroundSession = base.backgroundSession
-        c.compactDataFormat = base.compactDataFormat
-        c.serverType = base.serverType
-        c.test = base.test
+        let c = base.copy()
         c.completionHandler = completionHandler
         return c
     }
